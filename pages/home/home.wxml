@@ -1,0 +1,77 @@
+<!--pages/home/home.wxml-->
+<view class='view'>
+  <view class='header'>
+    <!-- 轮播图 -->
+    <swiper>
+      <block class="adfs" wx:for="{{adfs}}" wx:key="{{id}}">
+        <swiper-item>
+          <image class='adfs-img' src='{{item.mobileUrl}}' mode='scaleToFill'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 捷报信息 -->
+    <view class='hot'>
+      <image class='hot-img' src='../../image/tuijian@2x.png'></image>
+      <swiper class="article" vertical autoplay circular>
+        <block wx:for="{{article}}" wx:key="{{id}}">
+          <swiper-item class="art-item">
+            <text>{{item.name}}</text>
+            <text>{{item.summary}}</text>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class='cut'></view>
+  <view class='main'>
+    <!-- 导航栏 -->
+    <view class='nav'>
+      <view class='flex-wrap'>
+        <navigator class='flex-item' url='../new-list/new-list'>
+          <image class='nav-img' src='../../image/xinfang@2x.png'></image>
+          <text class='nav-txt'>新房</text>
+        </navigator>
+        <navigator class='flex-item' url='../sec-list/sec-lsit'>
+          <image class='nav-img' src='../../image/ershoufang@2x.png'></image>
+          <text class='nav-txt'>二手房</text>
+        </navigator>
+        <navigator class='flex-item' url='../lease-list/lease-list'>
+          <image class='nav-img' src='../../image/zufang@2x.png'></image>
+          <text class='nav-txt'>租房</text>
+        </navigator>
+      </view>
+    </view>
+    <view class='row-container'>
+       <view class='common-tit'>推荐房源</view>
+       <view class='content-wrapper'>
+         <view class='content-list' wx:for="{{primese}}"
+           wx:key="{{item.id}}">
+           <navigator class='item' hover-class='btn-hover'
+             url='../new/new?id={{item.id}}'>
+            <view class='left'>
+            <image src='{{item.thumbUrl}}'></image>
+            </view>
+            <view class='right'>
+              <view class='title p'>{{item.name}}</view>
+              <view class='msg p'>
+              <text>{{item.city}}/{{item.address}}</text>
+              </view>
+              <view class='tab p'>
+               <view wx:if='{{item.ownershipType}}'>
+                  {{item.ownershipType}}
+               </view>
+               <view wx:if='{{item.floorType}}'>
+                  {{item.floorType}}
+               </view>
+              </view>
+              <view class='sale'>
+                <view class='price'>{{item.currentPrice}}万</view>
+                <view class='price-description'>{{item.priceDescription}}</view>
+              </view>
+            </view>
+           </navigator>
+         </view>  
+       </view>
+    </view>
+  </view>
+</view>

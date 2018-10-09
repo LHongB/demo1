@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/dynamic/dynamic",
+    "pages/client/client",
+    "pages/train/train",
+    "pages/my/my",
+    "pages/new-list/new-list",
+    "pages/sec-list/sec-lsit",
+    "pages/lease-list/lease-list",
+    "pages/new/new",
+    "pages/more/more"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "",
+        "iconPath": "image/houses.png",
+        "selectedIconPath": "image/i-houses.png"
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "text": "",
+        "iconPath": "image/dynamic.png",
+        "selectedIconPath": "image/i-dynamic.png"
+      },
+      {
+        "pagePath": "pages/client/client",
+        "text": "",
+        "iconPath": "image/client.png",
+        "selectedIconPath": "image/i-client.png"
+      },
+      {
+        "pagePath": "pages/train/train",
+        "text": "",
+        "iconPath": "image/train.png",
+        "selectedIconPath": "image/i-train.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/i-my.png"
+      }
+    ]
+  }
+}

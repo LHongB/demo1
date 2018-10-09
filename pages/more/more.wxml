@@ -1,0 +1,40 @@
+<!--pages/more/more.wxml-->
+<wxs module='filter' src='../../filter/filter.wxs'></wxs>
+<view class='more-page'>
+     <text class='tit'>{{houseInfo.name}}</text>
+     <view class='resources-list'>
+       <view class='res-list-tag'>銷售情況：</view>
+       <view class='res-list-text'>{{houseInfo.saleStatus || '--'}}</view>
+     </view>
+     <view class='resources-list'>
+       <view class='res-list-tag'>開盤時間：</view>
+       <view class='res-list-text'>{{filter.getDate(houseInfo.lastLaunchTime) || '--'}}</view>
+     </view>
+     <view class='resources-list'>
+       <view class='res-list-tag'>交房时间：</view>
+       <view class='res-list-text'>{{filter.getDate(houseInfo.deliveryTime) || '--'}}</view>
+       <!-- <view class='res-list-text'>{{houseInfo.deliveryTime || '--'}}</view> -->
+     </view>
+     <view class='resources-list'>
+       <view class='res-list-tag'>环线配置：</view>
+       <view class='res-list-text'>{{houseInfo.circlePos || '--'}}</view>
+     </view>
+     <view class='resources-list'>
+       <view class='res-list-tag'>楼盘地址：</view>
+       <view class='res-list-text'>{{houseInfo.address || '--'}}</view>
+     </view>     
+     <view class='cut'></view>
+     <text class='resources-tit'>销售信息</text>
+     <view class='resources-list'>
+       <view class='res-list-tag'>参考单价：</view>
+       <view class='res-list-text'>{{houseInfo.minPrice || '--'}}</view>
+       </view>
+     <view class='resources-list'>
+       <view class='res-list-tag'>售楼地址：</view>
+       <view class='res-list-text'>{{houseInfo.address || '--'}}</view>
+       </view> 
+     <view class='resources-list'>
+       <view class='res-list-tag'>预售许可证：</view>
+       <view class='res-list-text'>{{houseInfo.preSaleCard || '--'}}</view>           
+     </view>             
+</view>

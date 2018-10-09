@@ -1,0 +1,10 @@
+var filter = {
+   getDate:function(time){
+     if(!time) return '';
+     times = time.split("T")[0].split("-");
+     return times[0] + "年" + times[1] + "月" + times[2] + "日";
+   }
+}
+module.exports = {
+  getDate:filter.getDate
+}

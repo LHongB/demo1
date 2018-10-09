@@ -1,0 +1,8 @@
+<!--pages/my/my.wxml-->
+<view class='my'>
+   <view class='my-txt'>
+      <view class='my-img'>
+        <!-- <image class='img' mode='aspectFill' src='{{avatarUrl ? avataUrl : ''}}'></image> -->
+      </view>
+   </view>
+</view>

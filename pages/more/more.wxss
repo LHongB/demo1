@@ -1,0 +1,9 @@
+/* pages/more/more.wxss */
+.tit{
+  font-size: 32rpx;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  margin: 20rpx 0;
+}
+
